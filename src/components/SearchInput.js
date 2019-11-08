@@ -1,14 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types'
+import Locations from './Locations'
 
 const SearchInput = (props) => {
 
   const {
     handleChange,
+    handleKeyUp,
     handleSubmit,
+    handleKeyDown,
     value,
     type,
     id,
+    searchName,
+    cursor,
+    showSearch
   } = props;
 
   return (
@@ -22,7 +28,13 @@ const SearchInput = (props) => {
           value={value}
           placeholder="city, airport, station, region, district..."
           onChange={handleChange}
+          onKeyUp={handleKeyUp}
+          onKeyDown={handleKeyDown}
         />
+        {showSearch ? (
+          <Locations searchName={searchName} cursor={cursor} />
+        ) : null}
+
         <button value="submit" type="submit" id="search-button">
           Search
           </button>
@@ -30,7 +42,6 @@ const SearchInput = (props) => {
     </div>
   );
 }
-
 
 SearchInput.propTypes = {
   value: PropTypes.string.isRequired,

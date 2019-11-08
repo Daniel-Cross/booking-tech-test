@@ -1,22 +1,21 @@
+$mobile-breakpoint: 421px;
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: url(https://images.pexels.com/photos/2007401/pexels-photo-2007401.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   color: white;
+  padding-top: 12%;
 }
 
-.App-link {
-  color: #09d3ac;
+
+@media (max-width: $mobile-breakpoint) {
+  .App {
+    background: linear-gradient(to bottom, #f5d361 0%, #e7bf3b 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }

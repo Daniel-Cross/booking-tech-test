@@ -29,7 +29,6 @@ class App extends Component {
           value={location}
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}
-
         />
       </div>
     );
